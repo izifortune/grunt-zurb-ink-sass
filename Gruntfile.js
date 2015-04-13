@@ -23,6 +23,21 @@ module.exports = function(grunt) {
             }
         },
 
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        '.tmp/main.css',
+                        'src/*.html'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: ['./src', '.tmp']
+                }
+            }
+        },
+
         premailer: {
             simple: {
                 options: {
@@ -52,6 +67,6 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.registerTask('default', ['sass', 'connect:dev', 'watch' ]);
+    grunt.registerTask('default', ['sass', 'browserSync', 'watch' ]);
     grunt.registerTask('build', ['sass', 'premailer']);
 };
