@@ -48,6 +48,7 @@ module.exports = function(grunt) {
                   'dist/hero.html': ['src/hero.html'],
                   'dist/sidebar.html': ['src/sidebar.html'],
                   'dist/sidebar-hero.html': ['src/sidebar-hero.html'],
+                  'dist/newsletter.html': ['src/newsletter.html']
                 }
             }
         },
